@@ -12,7 +12,7 @@ import java.time.LocalDate;
 public class BitcoinPriceCache {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // This will auto-generate the ID
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false)

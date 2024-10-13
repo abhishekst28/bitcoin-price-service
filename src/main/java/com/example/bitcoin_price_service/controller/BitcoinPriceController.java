@@ -4,6 +4,7 @@ import com.example.bitcoin_price_service.model.HistoricalPriceRequest;
 import com.example.bitcoin_price_service.model.HistoricalPriceResponse;
 import com.example.bitcoin_price_service.service.BitcoinPriceService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,15 +24,15 @@ public class BitcoinPriceController {
         }
     }
 
-    @GetMapping("/abc")
-    public String getHistoricalPricess() {
-        return "Hello";
+    @PostMapping("/offline-mode")
+    public ResponseEntity<String> setOfflineMode(@RequestParam boolean offlineMode) {
+        bitcoinPriceService.setOfflineMode(offlineMode);
+        return ResponseEntity.ok("Offline mode set to " + offlineMode);
     }
 
-    @PostMapping("/toggle-offline")
-    public String toggleOfflineMode(@RequestParam boolean offline) {
-        bitcoinPriceService.setOfflineMode(offline);
-        return "Offline mode set to " + offline;
+    @GetMapping("/offline-mode")
+    public ResponseEntity<Boolean> getOfflineMode() {
+        return ResponseEntity.ok(bitcoinPriceService.getOfflineMode());
     }
 }
 

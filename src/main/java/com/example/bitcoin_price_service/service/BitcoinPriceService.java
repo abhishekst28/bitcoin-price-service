@@ -97,4 +97,8 @@ public class BitcoinPriceService {
     public void setOfflineMode(boolean offlineMode) {
         this.offlineMode = offlineMode;
     }
+
+    public boolean getOfflineMode() {
+        return offlineMode;
+    }
 }
