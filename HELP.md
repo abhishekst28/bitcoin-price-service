@@ -1,7 +1,7 @@
 # Read Me First
 The following was discovered as part of building this project:
 
-* The original package name 'com.example.bitcoin-price-service' is invalid and this project uses 'com.example.bitcoin_price_service' instead.
+* The original package name 'com.example.bitcoin-price-service' is invalid and this project uses 'com.example.bitcoinpriceservice' instead.
 
 # Getting Started
 

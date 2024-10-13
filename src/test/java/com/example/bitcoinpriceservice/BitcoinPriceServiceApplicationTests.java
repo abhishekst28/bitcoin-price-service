@@ -1,4 +1,4 @@
-package com.example.bitcoin_price_service;
+package com.example.bitcoinpriceservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
